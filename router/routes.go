@@ -11,5 +11,6 @@ func CollectRoute(r *gin.Engine) *gin.Engine {
 	r.POST("/api/auth/register", controller.RegisterUser)
 	r.POST("/api/auth/login", controller.Login)
 	r.GET("/api/auth/info", middleware.AuthMiddle(), controller.Info)
+	r.GET("api/article")
 	return r
 }
